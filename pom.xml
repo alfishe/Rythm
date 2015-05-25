@@ -21,7 +21,7 @@
     <groupId>org.rythmengine</groupId>
     <artifactId>rythm-engine</artifactId>
     <packaging>jar</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
 
     <name>Rythm Template Engine</name>
     <description>A strong typed high performance Java Template engine with .Net Razor like syntax</description>
@@ -34,17 +34,14 @@
     </parent>
 
     <scm>
-        <connection>scm:git:git://github.com/greenlaw110/Rythm.git</connection>
-        <developerConnection>scm:git:git@github.com:greenlaw110/Rythm.git</developerConnection>
-        <url>git://github.com/greenlaw110/Rythm.git</url>
+        <connection>scm:git:git://github.com/alfishe/Rythm.git</connection>
+        <developerConnection>scm:git:git@github.com:alfishe/Rythm.git</developerConnection>
+        <url>git://github.com/alfishe/Rythm.git</url>
     </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <maven.test.skip>false</maven.test.skip>
-        <!-- until tests are fixed -->
     </properties>
 
     <licenses>
@@ -112,9 +109,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
             <groupId>org.eclipse.jdt.core.compiler</groupId>
             <artifactId>ecj</artifactId>
-            <version>4.4.1</version>
+            <version>4.4.2</version>
         </dependency>
 
         <dependency>
@@ -126,13 +130,13 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.3.2</version>
+            <version>3.4</version>
         </dependency>
 
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.4</version>
+            <version>1.2.6</version>
         </dependency>
 
         <dependency>
@@ -144,32 +148,13 @@
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
-            <version>2.6</version>
+            <version>2.7</version>
         </dependency>
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.3.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-api-1.0-sdk</artifactId>
-            <version>1.9.17</version>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.3</version>
         </dependency>
 
         <dependency>
@@ -181,15 +166,30 @@
         <dependency>
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache</artifactId>
-            <version>2.9.0</version>
+            <version>2.10.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+            <version>1.9.21</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>net.spy</groupId>
             <artifactId>spymemcached</artifactId>
-            <version>2.11.6</version>
+            <version>2.11.7</version>
+            <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <profiles>
